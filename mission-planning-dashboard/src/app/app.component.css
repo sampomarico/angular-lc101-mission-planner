@@ -1,4 +1,6 @@
 .box {
     display: flex;
     padding: 10px;
+    background-color: lightblue;
+    border: 1px solid black;
 }
