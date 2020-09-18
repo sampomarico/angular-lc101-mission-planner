@@ -21,6 +21,7 @@ export class EquipmentComponent implements OnInit {
    cargoMass: number = 0;
    maximumAllowedMass: number = 2000;
    maxItems: number = 10;
+   currentMass: number = 2000;
 
    constructor() { }
 
@@ -29,6 +30,7 @@ export class EquipmentComponent implements OnInit {
    addItem(equipment: object) {
      this.cargoHold.push(equipment);
      this.cargoMass = this.cargoMass + equipment['mass'];
+     this.currentMass = this.maximumAllowedMass - this.cargoMass;
      if (this.cargoMass < 1800) {
        return false;
      } else {
@@ -39,6 +41,7 @@ export class EquipmentComponent implements OnInit {
     emptyCargo() {
       this.cargoHold = [];
       this.cargoMass = 0;
+      this.currentMass = 2000;
     }
    
 }

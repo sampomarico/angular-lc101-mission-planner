@@ -16,7 +16,7 @@
         <li *ngFor="let equipment of cargoHold">{{equipment.name}}</li>
     </ol>
     <p>Mass in Hold: {{cargoMass}} kg</p>
-    <p [class.nearMaxMass]="maximumAllowedMass - cargoMass <= 200">Mass Budget Remaining: {{<!-- Calculate mass remaining here. -->}} kg</p>
+    <p [class.nearMaxMass]="maximumAllowedMass - cargoMass <= 200">Mass Budget Remaining: {{currentMass}} kg</p>
     <button (click)="emptyCargo()">Empty Hold</button>
 </div>
 
